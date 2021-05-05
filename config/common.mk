@@ -119,5 +119,8 @@ include vendor/nightshade/config/version.mk
 # BootAnimation
 -include vendor/nightshade/config/bootanimation.mk
 
+# Audio
+$(call inherit-product, vendor/proton/audio/audio.mk)
+
 # Include extra packages
 include vendor/nightshade/config/packages.mk
