@@ -120,7 +120,7 @@ include vendor/nightshade/config/version.mk
 -include vendor/nightshade/config/bootanimation.mk
 
 # Audio
-$(call inherit-product, vendor/proton/audio/audio.mk)
+$(call inherit-product, vendor/nightshade/audio/audio.mk)
 
 # Include extra packages
 include vendor/nightshade/config/packages.mk
