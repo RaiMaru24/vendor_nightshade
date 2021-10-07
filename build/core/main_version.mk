@@ -1,25 +1,18 @@
-# Build fingerprint
-ifneq ($(BUILD_FINGERPRINT),)
+BUILD_NUMBER_CUSTOM := $(shell date -u +%H%M)
+
+BUILD_SIGNATURE_KEYS := release-keys
+
+BUILD_FINGERPRINT := $(PRODUCT_BRAND)/$(TARGET_DEVICE)/$(TARGET_DEVICE):$(PLATFORM_VERSION)/$(BUILD_ID)/$(BUILD_NUMBER_CUSTOM):$(TARGET_BUILD_VARIANT)/$(BUILD_SIGNATURE_KEYS)
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
-endif
 
-# LineageOS System Version
+# NightShadeOS System Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal
-
-# LineageOS Platform Display Version
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
-
-# LineageOS Platform SDK Version
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
-
-# LineageOS Platform Internal Version
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+  ro.nightshade.version=$(NIGHTSHADE_DISPLAY_VERSION) \
+  ro.nightshade.build.status=$(NIGHTSHADE_BUILD_TYPE) \
+  ro.modversion=$(NIGHTSHADE_MOD_VERSION) \
+  ro.nightshade.build.date=$(BUILD_DATE) \
+  ro.nightshade.buildtype=$(NIGHTSHADE_BUILD_TYPE) \
+  ro.nightshade.fingerprint=$(NIGHTSHADE_FINGERPRINT) \
+  ro.nightshade.device=$(NIGHTSHADE_BUILD) \
+  org.nightshade.version=$(NIGHTSHADEVERSION)

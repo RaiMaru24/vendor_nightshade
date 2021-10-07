@@ -1,5 +1,6 @@
 # Copyright (C) 2012 The CyanogenMod Project
 #           (C) 2017-2021 The LineageOS Project
+#           (C) 2023 The NightShadeOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -164,7 +165,7 @@ else
         $(error "NO KERNEL CONFIG")
     else
         ifneq ($(TARGET_FORCE_PREBUILT_KERNEL),)
-            ifneq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(LINEAGE_BUILDTYPE)),)
+            ifneq ($(filter OFFICIAL,$(NIGHTSHADE_BUILDTYPE)),)
                 $(error "PREBUILT KERNEL IS NOT ALLOWED ON OFFICIAL BUILDS!")
             else
                 $(warning **********************************************************)
