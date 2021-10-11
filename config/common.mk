@@ -110,6 +110,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/nightshade/config/partner_gms.mk
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/nightshade/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/nightshade/overlay/common
+
 # Versioning
 include vendor/nightshade/config/version.mk
 
