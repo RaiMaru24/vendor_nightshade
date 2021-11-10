@@ -65,12 +65,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# Include AOSP audio files
-include vendor/nightshade/config/aosp_audio.mk
-
-# Include NightShade audio files
-include vendor/nightshade/config/nightshade_audio.mk
-
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
