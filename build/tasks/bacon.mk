@@ -36,3 +36,5 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	echo -e ${CL_BLD}${CL_GRN}"TimeStamp:"${CL_RED}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.nightshade.build.date | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"Integer Value:"${CL_RED}" `wc -c $(NIGHTSHADE_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
+	@echo "Creating json OTA..." >&2
+	$(hide) ./vendor/nightshade/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) nightshade-$(NIGHTSHADE_VERSION).zip
