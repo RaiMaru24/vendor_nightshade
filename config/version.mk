@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ANDROID_VERSION := 12.0
+ANDROID_VERSION := 13.0
 NIGHTSHADEVERSION := 1.0
 
 NIGHTSHADE_BUILD_TYPE ?= UNOFFICIAL
@@ -47,6 +47,8 @@ NIGHTSHADE_DISPLAY_BUILDTYPE := $(NIGHTSHADE_BUILD_TYPE)
 
 NIGHTSHADE_FINGERPRINT := NightShadeOS/$(NIGHTSHADE_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(NIGHTSHADE_BUILD_DATE)
 
+NIGHTSHADE_PLATFORM_RELEASE_OR_CODENAME := 13
+
 # NightShadeos System Version
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.nightshade.version=$(NIGHTSHADE_DISPLAY_VERSION) \
@@ -56,4 +58,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.nightshade.buildtype=$(NIGHTSHADE_BUILD_TYPE) \
   ro.nightshade.fingerprint=$(NIGHTSHADE_FINGERPRINT) \
   ro.nightshade.device=$(NIGHTSHADE_BUILD) \
+  ro.nightshade.platform_release_or_codename=$(NIGHTSHADE_PLATFORM_RELEASE_OR_CODENAME) \
   org.nightshade.version=$(NIGHTSHADEVERSION)
