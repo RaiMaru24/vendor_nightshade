@@ -31,7 +31,7 @@ import urllib.request
 
 custom_local_manifest = ".repo/local_manifests/nightshade.xml"
 
-custom_default_revision = "12"
+custom_default_revision = "13"
 custom_dependencies = "nightshade.dependencies"
 org_manifest = "NightShadeOS-Devices"  # leave empty if org is provided in manifest
 org_display = "NightShadeOS-Devices"  # needed for displaying
