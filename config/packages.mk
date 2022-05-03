@@ -1,7 +1,9 @@
 # NightShadeOS packages
 PRODUCT_PACKAGES += \
     Terminal \
-    ThemePicker
+    ThemePicker \
+    Eleven \
+    Etar
 
 # Extra tools in NightShade
 PRODUCT_PACKAGES += \
