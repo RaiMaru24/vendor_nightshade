@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     Terminal \
     ThemePicker \
     Eleven \
-    Etar
+    Etar \
+    OmniJaws
 
 # Extra tools in NightShade
 PRODUCT_PACKAGES += \
