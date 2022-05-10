@@ -6,6 +6,12 @@ PRODUCT_PACKAGES += \
     Etar \
     OmniJaws
 
+# Smartcookieweb
+ifeq ($(SMARTCOOKIEWEB),true)
+     PRODUCT_PACKAGES += \
+         SmartCookieWeb
+endif
+
 # Extra tools in NightShade
 PRODUCT_PACKAGES += \
     7z \
