@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     OmniJaws
 
 # Smartcookieweb
-ifeq ($(SMARTCOOKIEWEB),true)
+SMARTCOOKIEWEB ?= true
+ifeq ($(strip $(SMARTCOOKIEWEB)),true)
      PRODUCT_PACKAGES += \
          SmartCookieWeb
 endif
